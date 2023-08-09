@@ -29,6 +29,9 @@ export default class User{
     }
     // Seters
     set nome(nome){
+        if(nome === ''){
+            throw new Error('Campo nome não pode ser vazio!');
+        }
         this.#nome = nome;
     }
     set email(email){
@@ -44,19 +47,9 @@ export default class User{
         this.#ativo = ativo;
     }
     // Functions
-    #montaObjUser(){
-        return({
-            nome: this.#nome,
-            email: this.#email,
-            nascimento: this.#nascimento,
-            role: this.#role,
-            ativo: this.#ativo
-        })
-    }
 
     exibirInfos(){
-        const objUser = this.#montaObjUser()
-        return `${objUser.nome}, ${objUser.email}, ${objUser.nascimento}, ${objUser.role}, ${objUser.ativo}`;
+        return `${this.nome}, ${this.email}, ${this.nascimento}, ${this.role}, ${this.ativo}`;
     }
 
 }

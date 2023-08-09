@@ -16,13 +16,19 @@ novoUser.nascimento = '1976-03-10';
 novoUser.role = 'Admin';
 novoUser.ativo = true;
 
-//console.log(novoUser.exibirInfos());
+console.log(novoUser.exibirInfos());
 
+console.log("");
+console.log("----------------------------------------------");
 
 /* ****************************************************************************** */
 
 const novoAdmin = new Admin();
 
 novoAdmin.nome = 'Vitor';
+
+console.log(novoAdmin.nome);
+
+novoAdmin.nome = '';
 
 console.log(novoAdmin.nome);
