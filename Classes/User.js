@@ -29,9 +29,6 @@ export default class User{
     }
     // Seters
     set nome(nome){
-        if(nome === ''){
-            throw new Error('Campo nome não pode ser vazio!');
-        }
         this.#nome = nome;
     }
     set email(email){

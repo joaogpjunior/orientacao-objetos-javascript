@@ -20,15 +20,14 @@ console.log(novoUser.exibirInfos());
 
 console.log("");
 console.log("----------------------------------------------");
-
-/* ****************************************************************************** */
+console.log("");
 
 const novoAdmin = new Admin();
 
 novoAdmin.nome = 'Vitor';
+novoAdmin.email = 'v@v.com';
+novoAdmin.nascimento = '2004-04-18';
+novoAdmin.role = 'Admin';
+novoAdmin.ativo = true;
 
-console.log(novoAdmin.nome);
-
-novoAdmin.nome = '';
-
-console.log(novoAdmin.nome);
+console.log(novoAdmin.exibirInfos());
